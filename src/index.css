@@ -1,13 +1,66 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+.multiselect {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .multiselect-selected {
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
+    cursor: pointer;
+    background-color: #fff;
+  }
+  
+  .multiselect-selected-values {
+    flex-grow: 1;
+  }
+  
+  .multiselect-caret {
+    margin-left: 5px;
+  }
+  
+  .multiselect-placeholder {
+    color: #999;
+  }
+  
+  .multiselect-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    display: inline-flex;
+    flex-direction: column;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 2px;
+    padding: 5px 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .multiselect-option {
+    display: flex;
+    align-items: center;
+    padding: 3px 10px;
+    cursor: pointer;
+  }
+  
+  .multiselect-option:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .multiselect-option input[type='checkbox'] {
+    margin-right: 5px;
+  }
+  
+  .multiselect.open .multiselect-options {
+    display: inline-flex;
+  }
+  
